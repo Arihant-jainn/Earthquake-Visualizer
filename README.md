@@ -6,7 +6,7 @@ The app provides an **intuitive map interface**, **magnitude-based color indicat
 ---
 
 ## 🚀 Live Demo  
-🔗 **[View Live Website](https://earthquake-visualizer-aj.vercel.app/)]**  
+🔗 **[Earthquake Visualizer](https://earthquake-visualizer-aj.vercel.app/)]**  
 
 ---
 
