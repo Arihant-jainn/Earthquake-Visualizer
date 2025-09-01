@@ -58,22 +58,69 @@ It also provides **earthquake statistics**, search filters, and a modern **dark/
 
 ## 📂 Project Structure
 
-earthquake-visualizer/
-├── public/ # Static assets
-├── src/
-│ ├── components/ # Reusable components
-│ │ ├── MapView.tsx # Interactive Leaflet map
-│ │ ├── StatsChart.tsx # Recharts statistics visualization
-│ │ ├── Filters.tsx # (Optional) Search & filters
-│ ├── hooks/
-│ │ ├── useEarthquakes.ts # Custom hook for API data fetching
-│ ├── pages/
-│ │ ├── Home.tsx # Main homepage
-│ ├── App.tsx # App entry point
-│ ├── main.tsx # React root rendering
-│ ├── index.css # Tailwind styles
-├── package.json
-├── tailwind.config.js
-├── tsconfig.json
-├── vite.config.ts
-└── README.md
+earthquake-visualizer/             # Root directory
+│
+├── public/                        # Public assets accessible by the browser
+│   ├── favicon.ico               # Website favicon
+│   ├── index.html                # HTML entry point
+│   └── manifest.json             # (Optional) PWA configuration
+│
+├── src/                           # Source code
+│   ├── assets/                   # Images, icons, and static assets
+│   │   ├── logo.svg
+│   │   └── placeholder.png
+│   │
+│   ├── components/               # Reusable components
+│   │   ├── Header.tsx           # Top navigation bar
+│   │   ├── Footer.tsx           # Website footer
+│   │   ├── MapView.tsx          # Interactive Leaflet map
+│   │   ├── StatsChart.tsx       # Recharts statistics visualization
+│   │   ├── EarthquakeCard.tsx   # Earthquake info cards
+│   │   ├── Filters.tsx          # (Optional) Search & filter UI
+│   │   └── Loader.tsx           # Loading spinner component
+│   │
+│   ├── hooks/                    # Custom React hooks
+│   │   └── useEarthquakes.ts    # Fetching & managing earthquake data
+│   │
+│   ├── pages/                    # Application pages
+│   │   └── Home.tsx             # Main home page
+│   │
+│   ├── styles/                   # Styling files
+│   │   └── globals.css          # Global Tailwind styles
+│   │
+│   ├── types/                    # TypeScript type definitions
+│   │   └── earthquake.ts        # Earthquake data types
+│   │
+│   ├── utils/                    # Utility functions
+│   │   ├── formatDate.ts        # Formats date & time
+│   │   └── magnitudeColor.ts    # Returns color based on magnitude
+│   │
+│   ├── App.tsx                   # Root application component
+│   ├── main.tsx                  # React entry point
+│   ├── index.css                 # Tailwind base styles
+│   └── vite-env.d.ts             # Vite environment types
+│
+├── .gitignore                    # Git ignored files & folders
+├── package.json                 # Dependencies & scripts
+├── package-lock.json            # Dependency lock file
+├── postcss.config.js           # Tailwind & PostCSS configuration
+├── tailwind.config.js          # Tailwind CSS configuration
+├── tsconfig.json               # TypeScript compiler configuration
+├── tsconfig.node.json          # Node-specific TypeScript settings
+├── vite.config.ts              # Vite configuration file
+└── README.md                   # Project documentation
+
+
+---
+
+## ⚡ Getting Started
+
+Follow these instructions to set up the project locally.
+
+### **1. Clone the Repository**
+```bash
+git clone https://github.com/your-username/earthquake-visualizer.git
+cd earthquake-visualizer
+npm install
+npm run dev
+
