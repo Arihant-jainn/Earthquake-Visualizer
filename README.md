@@ -68,3 +68,10 @@ earthquake-visualizer/
 ├── tsconfig.app.json               # TS app-level config
 ├── tsconfig.node.json             # TS Node-level config
 └── vite.config.ts                 # Vite configuration
+
+
+git clone https://github.com/your-username/earthquake-visualizer.git
+cd earthquake-visualizer
+npm install
+npm run dev
+
