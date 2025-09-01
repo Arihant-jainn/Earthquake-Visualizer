@@ -40,53 +40,31 @@ The app provides an **intuitive map interface**, **magnitude-based color indicat
 ## 📂 Project Structure
 
 ```bash
-earthquake-visualizer/            # 🌍 Root directory
-│
-├── public/                       # Public static assets
-│   ├── favicon.ico              # Website favicon
-│   ├── robots.txt               # Search engine config (optional)
-│   ├── manifest.json            # PWA configuration (optional)
-│   └── index.html               # Main HTML entry point
-│
-├── src/                          # Application source code
-│   ├── assets/                  # Images, icons & static files
-│   │   ├── logo.svg
-│   │   └── placeholder.png
-│   │
-│   ├── components/              # Reusable UI components
-│   │   ├── Header.tsx           # Top navigation bar
-│   │   ├── Footer.tsx           # Website footer
-│   │   ├── MapView.tsx          # Interactive Leaflet map
-│   │   ├── StatsChart.tsx       # Recharts-based statistics visualization
-│   │   ├── EarthquakeCard.tsx   # Earthquake info cards
-│   │   ├── Filters.tsx          # Earthquake search & filter options
-│   │   └── Loader.tsx           # Loading spinner component
-│   │
-│   ├── hooks/                   # Custom React hooks
-│   │   └── useEarthquakes.ts    # Fetch & manage earthquake data
-│   │
-│   ├── pages/                   # Application pages
-│   │   └── Home.tsx             # Homepage UI
-│   │
-│   ├── styles/                  # Global styles
-│   │   └── globals.css          # Tailwind CSS base styles
-│   │
-│   ├── types/                   # TypeScript interfaces & types
-│   │   └── earthquake.ts        # Earthquake data types
-│   │
-│   ├── utils/                   # Utility functions
-│   │   ├── formatDate.ts        # Formats date & time
-│   │   └── magnitudeColor.ts    # Returns marker color based on magnitude
-│   │
-│   ├── App.tsx                  # Root application component
-│   ├── main.tsx                 # React entry point
-│   ├── index.css                # Tailwind base styles
-│   └── vite-env.d.ts            # Vite environment types
-│
-├── .gitignore                   # Git ignored files
-├── package.json                # Dependencies & scripts
-├── package-lock.json           # Dependency lock file
-├── postcss.config.js          # Tailwind/PostCSS configuration
-├── tailwind.config.js         # Tailwind setup file
-├── tsconfig.json              # TypeScript configuration
-└── README.md                  # Project documentation
+earthquake-visualizer/
+├── node_modules/                     # Installed dependencies
+├── src/                              # Application source code
+│   ├── components/                   # Reusable components
+│   │   ├── EarthquakeMap.tsx         # Interactive Leaflet map
+│   │   ├── ErrorDisplay.tsx          # Error handling component
+│   │   ├── Header.tsx               # App header and title
+│   │   ├── LoadingSpinner.tsx       # Loading spinner for API calls
+│   │   ├── MagnitudeFilter.tsx      # Magnitude range filter
+│   │   └── StatisticsPanel.tsx      # Earthquake stats & charts
+│   ├── hooks/                        # Custom React hooks
+│   ├── types/                        # TypeScript type definitions
+│   ├── utils/                        # Helper functions
+│   ├── App.tsx                       # Main app component
+│   ├── index.css                     # Global styles
+│   ├── main.tsx                      # Application entry point
+│   └── vite-env.d.ts                 # Vite TypeScript types
+├── .gitignore                        # Ignored files for Git
+├── eslint.config.js                 # ESLint configuration
+├── index.html                       # HTML template
+├── package.json                     # Dependencies & scripts
+├── package-lock.json                # Dependency lock file
+├── postcss.config.js               # PostCSS config for Tailwind
+├── tailwind.config.js              # Tailwind configuration
+├── tsconfig.json                   # TypeScript configuration
+├── tsconfig.app.json               # TS app-level config
+├── tsconfig.node.json             # TS Node-level config
+└── vite.config.ts                 # Vite configuration
