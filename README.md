@@ -57,3 +57,23 @@ It also provides **earthquake statistics**, search filters, and a modern **dark/
 ---
 
 ## 📂 Project Structure
+
+earthquake-visualizer/
+├── public/ # Static assets
+├── src/
+│ ├── components/ # Reusable components
+│ │ ├── MapView.tsx # Interactive Leaflet map
+│ │ ├── StatsChart.tsx # Recharts statistics visualization
+│ │ ├── Filters.tsx # (Optional) Search & filters
+│ ├── hooks/
+│ │ ├── useEarthquakes.ts # Custom hook for API data fetching
+│ ├── pages/
+│ │ ├── Home.tsx # Main homepage
+│ ├── App.tsx # App entry point
+│ ├── main.tsx # React root rendering
+│ ├── index.css # Tailwind styles
+├── package.json
+├── tailwind.config.js
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
